@@ -8,7 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
+{
+    BOOL isSearchOn;
+    BOOL canSelectRow;
+}
+@property(nonatomic,strong)UITableView *tableView;
+@property(nonatomic,strong)UISearchBar *searchBar;
+
+@property(nonatomic,strong)NSDictionary *list;
+@property(nonatomic,strong)NSArray *ff;
+
+@property(nonatomic,strong)NSMutableArray *listOfMovies;
+@property(nonatomic,strong)NSMutableArray *searchResult;
+
+
+
+
 
 
 @end
